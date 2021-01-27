@@ -7,7 +7,8 @@ namespace SecurityLab1_Starter
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            //Disabling default error responses
+            //filters.Add(new HandleErrorAttribute());
         }
     }
 }

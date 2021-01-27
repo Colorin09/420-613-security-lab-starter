@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Configuration;
 
 namespace SecurityLab1_Starter.Controllers
 {
@@ -17,6 +18,11 @@ namespace SecurityLab1_Starter.Controllers
         {
             ViewBag.Message = "Your application description page.";
 
+            //Reading the value from the config file
+
+            var appSettings = ConfigurationManager.AppSettings;
+            var colour = appSettings["colour"];
+
             return View();
         }
 
@@ -24,6 +30,11 @@ namespace SecurityLab1_Starter.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        public ActionResult DefaultAction()
+        {
             return View();
         }
     }
