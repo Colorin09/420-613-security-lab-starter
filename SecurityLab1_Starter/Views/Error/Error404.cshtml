@@ -3,8 +3,10 @@
     ViewBag.Title = "Error404";
 }
 
-<h2 style="margin-top:30px">Error404</h2>
+<h2 style="margin-top:30px">Error 404</h2>
 
-<p style="margin-top:40px">Sorry, the page you are researching could not be found:(</p>
+<p style="margin-top:40px">Sorry, the page you are researching 
+    <span><i>@ViewBag.CurrentUrl</i></span>
+    could not be found:(</p>
 
 <a href="~/">Return to Home page</a>

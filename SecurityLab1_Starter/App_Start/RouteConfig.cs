@@ -13,6 +13,7 @@ namespace SecurityLab1_Starter
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //Original Route
             routes.MapRoute(
                name: "Default",
                url: "{controller}/{action}/{id}",
@@ -23,6 +24,12 @@ namespace SecurityLab1_Starter
                 name: "Student",
                 url: "students/{id}",
                 defaults: new { Controller = "Student", action = "Index" }
+                );
+
+            routes.MapRoute(
+                name: "404Error",
+                url: "{*url}",
+                 defaults: new { controller = "Error", action = "NotFound" }
                 );
         }
     }
