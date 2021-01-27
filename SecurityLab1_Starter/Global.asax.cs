@@ -17,5 +17,14 @@ namespace SecurityLab1_Starter
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        protected void Application_Error()
+        {
+            var ex = Server.GetLastError();
+
+            Exception exception = Server.GetLastError(); 
+            System.Diagnostics.Debug.WriteLine(exception); 
+            Response.Redirect("/Home/Error");
+        }
     }
 }
